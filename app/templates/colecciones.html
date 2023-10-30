@@ -1,0 +1,21 @@
+{% extends './base.html' %}
+
+{% block title %}
+{{ nombre_tabla }}
+{% endblock %}
+
+{% block logout %}
+<a href="/logout" id="menu">Cerrar sesión</a>
+{% endblock %}
+
+{% block article %}
+<h1>Datos</h1>
+{% for i in results %}
+<article>
+    {% for key, value in i.items() %}
+        <p>{{ value }}</p>
+    {% endfor %}
+</article>
+{% endfor %}
+{% endblock %}
+

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	{% block head %}{% endblock %}
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+	<link rel="icon" type="image/x-icon" href="/static/img/MSX-Logo.svg.png">
+    <meta name="description" content={% block description%}{% endblock %}>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }}>
+</head>
+
+<body>
+	<div class="container">
+	<header>
+		<div><p id="navp"><a href="/"><a>Base de datos empresa Scott.</p></div>
+		<nav>
+			<ul>
+				<li>{% block logout %}{% endblock %}
+			</ul>
+		</nav>
+	</header>
+	{% block body %}
+    {% endblock %}
+	<section id="pageContent">
+		<main role="main">
+			<article>
+				{% block article %}
+                {% endblock %}
+			</article>
+		</main>
+	</section>
+	<footer>
+		<p>¡¡Página de prueba!! - <a href="https://html5-templates.com/preview/html5-page-layout.html">Template original</a> </p>
+	</footer>
+	</div>
+</body>
+
+</html>

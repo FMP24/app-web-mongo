@@ -1,0 +1,22 @@
+{% extends './base.html' %}
+
+{% block title %}
+Bienvenido a la base de datos
+{% endblock %}
+
+{% block logout %}
+<a href="/logout" id="menu">Cerrar sesión</a>
+{% endblock %}
+
+{% block article %}
+<h1>Bienvenido!</h1>
+{% for mensaje in get_flashed_messages() %}
+    {{ mensaje }}
+{% endfor %}
+
+<h2>Tablas</h2>
+    {% for i in tablelist%}
+        <p><a href="/tablas/{{ i }}">{{ i }}</a></p>
+    {% endfor %}
+{% endblock %}
+

@@ -1,0 +1,30 @@
+{% extends './base.html' %}
+
+{% block title %}
+Inicio
+{% endblock %}
+
+{% block logout %}
+{% endblock %}
+
+{% block article %}
+<h1>Empresa de scott</h1><br>
+<form action="" method="POST">  
+    <label for="username"><b>Usuario:</b></label><br>
+    <input type="text" name="username" value="{{ request.form.username }}"required><br>
+  
+    <label for="password"><b>Contraseña:</b></label><br>
+    <input type="password" name="password" value="{{ request.form.password }}" required><br>
+  
+    <button type="submit" value="Login">Login</button>
+    <label>
+    <input type="checkbox" checked="checked" name="remember"> Recuerdame
+    </label>
+  {% if error %}
+    <p class="error">{{ error }}</p>
+  {% endif %}
+  {% for mensaje in get_flashed_messages() %}
+    <p class="error">{{ mensaje }}</p>
+  {% endfor %}
+{% endblock %}
+

@@ -1,6 +1,6 @@
 # Proyecto-MSX
 
-**Para probarlo en local: Crear entorno virtual con las dependencias**
+**Crear entorno virtual con las dependencias**
 
 apt-get install python3-venv
 
@@ -10,8 +10,6 @@ source <nombre_entorno>/bin/activate
 
 **Dentro del entorno:**
 
-pip install flask    
-
-##Incluye Jinja2 y Werkzeug
+pip install flask pymongo
 
 **Despues, meter todo en una nueva carpeta dentro de la carpeta del entorno.**
